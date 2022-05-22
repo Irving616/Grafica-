@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Estados con más feminicidios</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="Chart.js"></script>
+</head>
+<body>
+    <canvas id="Gráfica" width="400" height="300"></canvas>
+</body>
+<script>
+    let miCanvas=document.getElementById("Gráfica").getContext("2d");
+
+    var Chart = new Chart(miCanvas,{
+        type:"radar",
+        data:{
+            labels:["Estado de México", "Nuevo León", "Veracruz", "CDMX"],
+            datasets:[
+                {
+                    label: "Gráfica de feminicidios en México",
+                    backgroundColor: "rgb(0,0,0)",
+                    borderColor: "rgb(0,225,0)",
+                    data:[12,39,5,30]
+                }
+            ]
+        }
+    })
+</script>
+</html>
